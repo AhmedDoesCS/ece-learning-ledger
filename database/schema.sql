@@ -3,6 +3,9 @@
 -- Author: Ahmed Ahmed
 -- Created: 2025-12-26
 
+DROP DATABASE IF EXISTS ece_learning_ledger;
+
+
 CREATE DATABASE ece_learning_ledger;
 USE ece_learning_ledger;
 
