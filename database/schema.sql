@@ -5,8 +5,10 @@
 
 DROP DATABASE IF EXISTS ece_learning_ledger;
 
+
 CREATE DATABASE ece_learning_ledger;
 USE ece_learning_ledger;
+
 
 CREATE TABLE components (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -17,6 +19,7 @@ CREATE TABLE components (
   description TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 
 CREATE TABLE circuits (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -54,6 +57,7 @@ CREATE TABLE concepts (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
 CREATE TABLE circuit_concepts (
   circuit_id INT NOT NULL,
   concept_id INT NOT NULL,
@@ -68,6 +72,7 @@ CREATE TABLE circuit_concepts (
     REFERENCES concepts(id)
     ON DELETE CASCADE
 );
+
 
 CREATE TABLE mistakes (
   id INT AUTO_INCREMENT PRIMARY KEY,
