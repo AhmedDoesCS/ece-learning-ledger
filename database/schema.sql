@@ -5,13 +5,13 @@
 
 DROP DATABASE IF EXISTS ece_learning_ledger;
 
-
 CREATE DATABASE ece_learning_ledger;
 USE ece_learning_ledger;
 
 CREATE TABLE components (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
+  type VARCHAR(50),
   category ENUM('passive', 'active') NOT NULL,
   symbol VARCHAR(10),
   description TEXT,
@@ -32,6 +32,7 @@ CREATE TABLE circuit_components (
   circuit_id INT NOT NULL,
   component_id INT NOT NULL,
   role VARCHAR(100),
+  quantity INT DEFAULT 1,
 
   PRIMARY KEY (circuit_id, component_id),
 
