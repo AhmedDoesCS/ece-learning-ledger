@@ -1,10 +1,9 @@
 USE ece_learning_ledger;
 
-INSERT INTO components (name, type)
+INSERT INTO components (name, category, symbol, description)
 VALUES
-('Resistor', 'Passive'),
-('Capacitor', 'Passive'),
-('Diode', 'Semiconductor');
+('Resistor', 'passive', 'R', 'Limits current'),
+('Capacitor', 'passive', 'C', 'Stores electric charge');
 
 INSERT INTO circuits (name, purpose)
 VALUES

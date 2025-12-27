@@ -11,9 +11,9 @@ USE ece_learning_ledger;
 CREATE TABLE components (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
-  type VARCHAR(50),
   category ENUM('passive', 'active') NOT NULL,
   symbol VARCHAR(10),
+  voltage_rating FLOAT DEFAULT 0,
   description TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -21,6 +21,7 @@ CREATE TABLE components (
 CREATE TABLE circuits (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
+  operating_voltage FLOAT DEFAULT 0,
   purpose TEXT,
   difficulty_level INT CHECK (difficulty_level BETWEEN 1 AND 5),
   notes TEXT,
