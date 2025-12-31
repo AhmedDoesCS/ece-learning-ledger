@@ -1,3 +1,9 @@
+# ⚠️ Archived Project
+This project represents an early exploration of full-stack development and database-driven applications.
+
+Key learnings from this project directly informed the design of my current project:
+[New Project Name] — an assistive learning tool for cognitive development.
+
 # ECE Learning Ledger
 
 A database-backed web application designed to help ECE students
